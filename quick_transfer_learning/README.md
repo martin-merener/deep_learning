@@ -36,4 +36,4 @@ The output of the app is the list with the 3 most likely kinds, and their associ
 
 Details about how to create the web app: in https://towardsdatascience.com/building-web-app-for-computer-vision-model-deploying-to-production-in-10-minutes-a-detailed-ec6ac52ec7e4 
 
-In a future version I will aim to make it able to handle multiple kinds of sushi in a same image, as well as tagging them in the image. It should also give a "no known sushi" if the image contains no sushi, or a kind different from the 12 on which it was trained. And if I daydream, after automatically tagging each kind of sushi, it would allow the user to rate each piece 1-5, and based on collaborative filtering from all users, recommend sushi restaurants to the user :)
+In a future version I will aim to make it able to handle multiple kinds of sushi in a same image, as well as tagging them in the image. It should also give a "no known sushi" if the image contains no sushi, or a kind different from the 12 on which it was trained. 
