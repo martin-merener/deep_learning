@@ -42,16 +42,16 @@ In a future version I will aim to make it able to handle multiple kinds of sushi
 
 1. Dogs: 
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/dogs_CM.JPG)
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/dogs_CM.JPG)
 
 2. Martial arts: 
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/martial_CM.JPG)
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/martial_CM.JPG)
 
 3. Toys: 
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/toys_CM.JPG)
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/toys_CM.JPG)
 
 4. Sushi: 
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/sushi_CM.JPG)
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/sushi_CM.JPG)
