@@ -37,3 +37,21 @@ The output of the app is the list with the 3 most likely kinds, and their associ
 Details about how to create the web app: in https://towardsdatascience.com/building-web-app-for-computer-vision-model-deploying-to-production-in-10-minutes-a-detailed-ec6ac52ec7e4 
 
 In a future version I will aim to make it able to handle multiple kinds of sushi in a same image, as well as tagging them in the image. It should also give a "no known sushi" if the image contains no sushi, or a kind different from the 12 on which it was trained. 
+
+### Confusion matrices on validation
+
+1. Dogs: 
+
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/dogs_CM.JPG)
+
+2. Martial arts: 
+
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/martial_CM.JPG)
+
+3. Toys: 
+
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/toys_CM.JPG)
+
+4. Sushi: 
+
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/sushi_CM.JPG)
