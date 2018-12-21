@@ -1,15 +1,16 @@
-# Quick transfer learning with fastai
+# More thorough transfer learning with fastai
 
-This project shows how to quickly implement an image classifier with fastai library, based on Transfer Learning from a pre-trained deep neural network. 
+Continuing experiments with transfer learning with fastai library, in this project I show solving classification with more challenging, larger and realistic datasets. 
 
 ### Models
 
 I built 4 classifiers (one notebook for each) for different image recognition problems:
-1. Happy vs angry dogs.
-2. Taekwondo vs Judo matches.
-3. Shopkins vs Trashies toys (daughter's idea).
-4. Twelve different kinds of sushi: mackerel, eel, shrimp, sea urchin, salmon roe, fatty tuna, octopus, yellowtail, squid,
-salmon, sweet egg, red tuna.
+1. 83 kinds of fruit.
+2. 7 kinds of skin cancer.
+3. ....
+4. ....
+
+# [KEEP EDITING BELOW]
 
 ### Approach
 
