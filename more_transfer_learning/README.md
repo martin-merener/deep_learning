@@ -7,7 +7,7 @@ Continuing experiments with transfer learning with fastai library, in this proje
 I built 4 classifiers (one notebook for each) for different image recognition problems:
 1. 83 kinds of fruit.
 2. 7 kinds of skin cancer.
-3. ....
+3. Pneumonia vs Normal
 4. ....
 
 # [KEEP EDITING BELOW]
