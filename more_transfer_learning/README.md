@@ -1,4 +1,4 @@
-# More thorough transfer learning with fastai
+# More challenging transfer learning with fastai
 
 Continuing experiments with transfer learning with fastai library, in this project I show solving classification with more challenging, larger and realistic datasets. 
 
