@@ -50,8 +50,6 @@ I built 4 classifiers (one notebook for each) for different image recognition pr
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/more_transfer_learning/images/skin_normalized_cms.JPG)
 
-##
-
 ### 3. Pneumonia: 
 
 ##### Validation:
