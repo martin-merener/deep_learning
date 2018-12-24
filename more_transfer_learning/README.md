@@ -54,17 +54,17 @@ I built 4 classifiers (one notebook for each) for different image recognition pr
 
 ##### Validation:
 
-Precision 0.993
-recall 0.966
-F1-score 0.980
+- Precision 0.993
+- Recall 0.966
+- F1-score 0.980
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/more_transfer_learning/images/pnemounia_va_CM.JPG)
 
 ##### Test:
 
-Precision 0.904
-Recall 0.992
-F1-score 0.946
+- Precision 0.904
+- Recall 0.992
+- F1-score 0.946
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/more_transfer_learning/images/pnemounia_te_CM.JPG)
 
