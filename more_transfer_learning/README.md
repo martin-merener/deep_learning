@@ -22,7 +22,7 @@ I built 4 classifiers (one notebook for each) for different image recognition pr
 1. Fruits: 25,679 (train), 17,119 (validation), 14,369 (test). Accuracies: 99.5% (validation), 99.0% (test). 
 2. Skin-cancer: 5,029 (train), 2,024 (validation), 2,962 (test). Accuracies: 84.6% (validation), 82.6% (test). 
 3. Pneumonia: 3,663 (train), 1,569 (validation), 624 (test). Accuracies: 96.9% (validation), 92.9% (test).
-4. Retina: _______ (train), _____ (validation), _____ (test). Accuracies: ____% (validation), ____% (test).
+4. Retina: 75,136 (train), 8,348 (validation), 1,000 (test). Accuracies: 96.8% (validation), 99.0% (test).
 
 ### Confusion matrices on Validation and Test sets
 
