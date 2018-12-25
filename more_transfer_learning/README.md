@@ -4,11 +4,11 @@ Continuing the experiments with transfer learning using fastai library, in this 
 
 ## Models
 
-I built 4 classifiers (one notebook for each) for different image recognition problems:
-1. 57,000 images of fruits classified into 83 different categories.
-2. 10,000 images of skin lesions classified into 7 types of skin-cancer diagnoses.
-3. 5,800 Chest X-Ray images that are classified into Pneumonia or Normal.
-4. 85,000 images of retinas, which are classified into 4 categories (normal, and 3 diseases).
+I built 4 classifiers for different image recognition problems (one notebook for each):
+1. 57,000 images of fruits, for classification into 83 different categories.
+2. 10,000 images of skin lesions, for classification into 7 types of skin-cancer diagnoses.
+3. 5,800 Chest X-Ray images, for a binary classification, Pneumonia or Normal.
+4. 85,000 images of retinas, for classification into classified into 4 categories (normal, and 3 diseases).
 
 ## Approach
 
