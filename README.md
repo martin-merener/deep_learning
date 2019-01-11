@@ -11,3 +11,9 @@ https://github.com/martin-merener/deep_learning/tree/master/more_transfer_learni
 
 The purpose of this project is to show how to effectively do transfer learning (using fastai library) to solve classification problems with challenging and realistic datasets. This is achieved by showing very successful classification performances across 4 different datasets (publicly available).
 In the first case, working with a dataset of 57,000 images of fruits which are classified into 83 different categories. The second dataset consists of 10,000 images of skin lesions, classified into 7 types of skin-cancer diagnoses. Then, 5,800 Chest X-Ray images for a binary classification into Pneumonia or Normal. Finally, a dataset of nearly 85,000 images of retinas, for classification into 4 categories (normal, and 3 diseases).
+
+## Project 3. Counting objects with a CNN.
+https://github.com/martin-merener/deep_learning/tree/master/count_with_a_CNN
+
+The goal of this project is to study whether a convolutional neural network can learn to count objects in images. Throughout an experiment with synthetic images, it is shown that a regression model obtained by transfer learning from resnet18, it is possible to achieve low error counting objects of interest. The focus of the project is to ensure that the task of learning how to count is challenging, which is achieved by creating a non-trivial set of images. It is also shown how the achieved performance generalizes well to images created with underlying parameter values beyond those used for training. 
+The objects being counted in the images are small white horizontal rectangles, which are located randomly along with vertical white rectangles. The target label for the regression problem is the number of horizontal rectangles only, ranging between 5 and 45. The model achieves a mean absolute error of 1.5. The work includes a thorough analysis of the performance of the CNN and its ability to generalize on the Test set.
