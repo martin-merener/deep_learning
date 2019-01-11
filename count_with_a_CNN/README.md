@@ -1,24 +1,24 @@
 # Counting objects with a CNN by regression
 
-In this project I study the task of counting objects of interest in images by training a CNN for regression using transfer learning from resnet 18.
+In this project I study the task of counting objects of interest in images, by training a CNN for regression using transfer learning (resnet18).
 
 ## Models
 
-I build a regression model for the following problems:
-1. 16,000 images synthetically created, with the goal of counting horizontal white rectangles, among vertical white rectangles, via regression.
-2. [In progress: counting the difference between horizontal and vertical rectangles, with a total of 40 to 60 rectangles in each image]
+I build regression models for the following problems:
+1. 16,000 images synthetically created, with the goal of counting horizontal rectangles, among vertical rectangles, via regression.
+2. [In progress: counting the difference between horizontal and vertical rectangles]
 
 ## Approach
 
-1. The datasets are synthetically generated with the purpose of making the learning task reasonably challenging.
-2. Images are created using parameters such as the number of horizontal rectangles, the total number of rectangles, and their sizes.
+1. The datasets are synthetically generated with the purpose of making the learning task challenging and interesting.
+2. Images are created using parameters such as: the number of horizontal rectangles (which is the label/target variable), the total number of rectangles, and their sizes.
 3. These parameters have limited values to generate the training images, but additional values to generate the testing images, which allows to evaluate the capacity of the CNN to generalize beyond training. 
-4. A detail analysis of the performance on different subsets of the testing error is performed, to assess the success of the task of counting objects by the trained CNN.
+4. A detailed analysis of the performance on different subsets of the testing seet is performed, to assess the success of the task of counting objects by the trained CNN.
 
 ## Data sizes and performances on Validation and Test sets
 
 1. Counting horizontal rectangles: 8,881 (train), 2,941 (validation), 7,855 (test). MAE: 1.4 (validation), 2.3 (test). 
-2. .
+2. ...
 
 ## Plots: actual vs predicted, actual vs error, rel-error histogram
 
@@ -40,7 +40,7 @@ I build a regression model for the following problems:
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/assessment_test_unknown_vals_n_obj.JPG)
 
-##### Conclusions (justification in notebook):
+#### Conclusions (justification in notebook):
 
 - A CNN trained to counting by regression on about 6,000 images having counts of the target object (horizontal rectangle) between 5 and 45, achieves a mean absolute error of 1.4 on Test images generated with the same parameter values that the training images were generated. On 50% of the images, the estimated count has a relative error below 5.5%, and in 95% of images a relative error below to 21.3%.
 - The images are created synthetically, generating horizontal and vertical white rectangles in random positions over a black background. The number of horizontal rectangles is the target variable of the regression task, while the vertical rectangles are introduced to avoid the number of white pixels to be a proxy for the count of horizontal rectangles (which would be an easy task if the images contain only the targeted horizontal rectangles).
