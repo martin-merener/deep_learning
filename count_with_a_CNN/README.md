@@ -18,6 +18,8 @@ I build regression models for the following problems:
 ## Data sizes and performances on Validation and Test sets
 
 1. Counting horizontal rectangles: 8,881 (train), 2,941 (validation), 7,855 (test). MAE: 1.4 (validation), 2.3 (test). 
+   Examples: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/4_examples.JPG)
+
 2. ...
 
 ## Plots: actual vs predicted, actual vs error, rel-error histogram
