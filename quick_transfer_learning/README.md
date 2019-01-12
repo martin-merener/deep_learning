@@ -21,10 +21,10 @@ salmon, sweet egg, red tuna.
 
 ### Data sizes and performances on validation
 
-1. Dogs: 336 (train), 144 (validation), 92% accuracy. 
-2. Martial arts: 493 (train), 211 (validation), 98% accuracy.
-3. Toys: 264 (train), 112 (validation), 95% accuracy.
-4. Sushi: 2049 (train), 877 (validation), 93% accuracy. This worked fairly well considering that there were 12 classes.
+1. Dogs: 336 (train), 144 (validation), 92% accuracy. ![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/dogs_angry_examples.JPG) ![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/dogs_happy_examples.JPG)
+2. Martial arts: 493 (train), 211 (validation), 98% accuracy. ![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/judo_tkd_examples.JPG)
+3. Toys: 264 (train), 112 (validation), 95% accuracy. ![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/toys_examples.JPG)
+4. Sushi: 2049 (train), 877 (validation), 93% accuracy. This worked fairly well considering that there were 12 classes. ![alt text](https://github.com/martin-merener/deep_learning/blob/master/quick_transfer_learning/images/sushi_examples.JPG)
 
 ### Web app demo
 
