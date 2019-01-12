@@ -2,29 +2,23 @@
 
 In this project I study the task of counting objects of interest in images, by training a CNN for regression using transfer learning (resnet18).
 
-## Models
+## Model
 
-I build regression models for the following problems:
-1. 16,000 images synthetically created, with the goal of counting horizontal rectangles, among vertical rectangles, via regression.
-2. [In progress: counting the difference between horizontal and vertical rectangles]
+I build a regression model for the problem of counting the number of horizontal rectangles, which are mixed with vertical rectangles. The images, a total of 16,000, are synthetically created. 
 
 ## Approach
 
-1. The datasets are synthetically generated with the purpose of making the learning task challenging and interesting.
+1. The dataset is synthetically generated with the purpose of making the learning task challenging and interesting.
 2. Images are created using parameters such as: the number of horizontal rectangles (which is the label/target variable), the total number of rectangles, and their sizes.
 3. These parameters have limited values to generate the training images, but additional values to generate the testing images, which allows to evaluate the capacity of the CNN to generalize beyond training. 
 4. A detailed analysis of the performance on different subsets of the testing seet is performed, to assess the success of the task of counting objects by the trained CNN.
 
 ## Data sizes and performances on Validation and Test sets
 
-1. Counting horizontal rectangles: 8,881 (train), 2,941 (validation), 7,855 (test). MAE: 1.4 (validation), 2.3 (test). 
-   Examples: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/4_examples.JPG)
+Counting horizontal rectangles: 8,881 (train), 2,941 (validation), 7,855 (test). MAE: 1.4 (validation), 2.3 (test). Examples: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/4_examples.JPG)
 
-2. ...
 
 ## Plots: actual vs predicted, actual vs error, rel-error histogram
-
-### 1. Counting horizontal rectangles
 
 ##### Validation:
 
