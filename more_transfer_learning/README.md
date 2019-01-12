@@ -29,6 +29,7 @@ Examples of images in notebook.
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/more_transfer_learning/images/pneumonia_examples.JPG)
 
 4. Retina: 75,136 (train), 8,348 (validation), 1,000 (test). Accuracies: 96.8% (validation), 99.0% (test).
+
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/more_transfer_learning/images/retina_examples.JPG)
 
 ## Confusion matrices on Validation and Test sets
