@@ -1,47 +1,26 @@
-# MODIFY
+# Combinatorial Data Augmentation
 
-# Counting objects with a CNN by regression
+In this project I develop a data augmentation approach that shows a strong reduction of test error rate in binary classification of images from the Fashion MNIST dataset.
 
-In this project I study the task of counting objects of interest in images, by training a CNN for regression using transfer learning (resnet18).
+The technique, which I call Combinatorial Data Augmentation (CDA), is suitable when very few labelled images are available, even for transfer learning, e.g., 10 labelled images from each category. The notebook presents only binary case, but the exact same idea can be applied to multi-class problems. 
 
-## Model
+The technique assumes that a pre-trained neural network is available, and that of course it has not been trained on the classes that the current problem aims to classify (otherwise, there is nothing to solve). In the notebook I use resnet34.
 
-I build a regression model for the problem of counting the number of horizontal rectangles, which are mixed with vertical rectangles. The images, a total of 16,000, are synthetically created. 
+## How CDA works
 
-## Approach
+Suppose we want to classify images from these two categories...[insert images] and we have only 12 images from each class, so 24 labelled images in total. We could leave 8 images for validation, and use the other 16 for transfer learning on resnet34, tuning the weights of the last layer. That's going to be the benchmark.
 
-1. The dataset is synthetically generated with the purpose of making the learning task challenging and interesting.
-2. Images are created using parameters such as: the number of horizontal rectangles (which is the label/target variable), the total number of rectangles, and their sizes.
-3. These parameters have limited values to generate the training images, but additional values to generate the testing images, which allows to evaluate the capacity of the CNN to generalize beyond training. 
-4. A detailed analysis of the performance on different subsets of the testing seet is performed, to assess the success of the task of counting objects by the trained CNN.
+What CDA does is to produce a large set of _collages_ from those 16 images used for training. These collages are simply 3x3 arrays of images taken randomly among the 16 available for training. [insert example].
 
-## Data sizes and performances on Validation and Test sets
+Because there are 9=3x3 locations, and 16 images available, the number of different collages is $16^9>10^10$. We would obviously not consider all possible collages, but only a subset of them, say around 50,000. The label of a collage is given by the class that occurs the most amoung the 9 images in it.
 
-Counting horizontal rectangles: 8,881 (train), 2,941 (validation), 7,855 (test). MAE: 1.4 (validation), 2.3 (test). Examples: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/4_examples.JPG)
+Once the collages are created, a transfer learning from resnet34 is applied using them, and because the number of collages is now large, one can tune more than just the last layer of resnet34, which gives a neural network $N_{alt}$. 
 
+Finally, one applies a transfer learning on $N_{alt}$, based on the 16 original training images, just as it was done for the benchmark, adjusting the weights in the last layer.
 
-## Plots: actual vs predicted, actual vs error, rel-error histogram
+## Experiments
 
-##### Validation:
+## Results
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/assessment_valid.JPG)
+## Conclusions
 
-##### Test (all):
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/assessment_test.JPG)
-
-##### Test with parameter values as in training:
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/assessment_test_known_vals_img_params.JPG)
-
-##### Test with actual counts having values not seen in training:
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/count_with_a_CNN/images/assessment_test_unknown_vals_n_obj.JPG)
-
-#### Conclusions (justification in notebook):
-
-- A CNN trained to counting by regression on about 6,000 images having counts of the target object (horizontal rectangle) between 5 and 45, achieves a mean absolute error of 1.4 on Test images generated with the same parameter values that the training images were generated. On 50% of the images, the estimated count has a relative error below 5.5%, and in 95% of images a relative error below to 21.3%.
-- The images are created synthetically, generating horizontal and vertical white rectangles in random positions over a black background. The number of horizontal rectangles is the target variable of the regression task, while the vertical rectangles are introduced to avoid the number of white pixels to be a proxy for the count of horizontal rectangles (which would be an easy task if the images contain only the targeted horizontal rectangles).
-- The training images contain a number of rectangles between 5 and 45, but only 28 of those values. However, the missing values, as well as values from 0 to 5, and from 46 to 50, are instead quantities of horizontal rectangles on testing images. The CNN shows very good generalization ability on images with those unknown-at-training label values: the MAE in this case is 1.6.
-- The CNN also generalizes well to unknown values for the total number of rectangles. That is, when images have a total number of rectangles above or below the total numbers provided on training, the CNN still predicts the total number of horizontal rectangles very well: MAE for this case is 1.4.
-- The CNN however shows a limitation at generalizing the ability to count horizontal rectangles when the sizes of these are different than the varying sizes using for training. This seem to suggest that the number of white pixels influences the count estimation more than it should. However, a closer analysis shows that within the rectangle size range used for training, the count of horizontal rectangles is constant with respect to the size of the rectangles. It is outside of the training range that the count estimation shows a monotonically increasing relationship with the size of the rectangles.
