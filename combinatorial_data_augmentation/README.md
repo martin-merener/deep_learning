@@ -55,6 +55,9 @@ In addition, two specific pairs, one "easy" and one "hard" to classify, are anal
 
 ## Results
 
+
+#### Easy pair 
+
 Both solutions, the benchmark and CDA are obtained, for different values of $m=|X_t|$, for the "easy" pair: _coat_ vs _boot_. 
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_collages_easy_pair.JPG)
@@ -66,6 +69,8 @@ The following graph shows the error rate on a test set having 1000 images for ea
 The following graph shows the ratio between the error rate for CDA and the benchmark, which expresses the error rate of CDA as a percentage of the error rate of the benchmark. 
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_ratio_error_rates_easy_pair.JPG)
+
+#### Hard pair
 
 The same for the "hard" pair: _pullover_ vs _shirt_.
 
@@ -82,6 +87,8 @@ Error rates on test set:
 Ratios between error rates:
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_ratio_error_rates_hard_pair.JPG)
+
+#### All pairs
 
 In addition, all 45 possible pairs among the 10 categories are considered, for some value of $m=|X_t|$ between 4 and 180, and the error rates on a test set are shown for both the benchmark and CDA. In all, but 1 case, CDA performs better than the benchmark. The results are shown here increasingly with respect to the ratio of error rates between CDA and the benchmark
 
