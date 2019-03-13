@@ -10,7 +10,9 @@ The technique assumes that a pre-trained neural network is available, and that i
 
 Suppose we want to classify images from these two categories: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_images_easy_pair.JPG) and we have only 12 images from each class, so 24 labelled images in total. We could leave 8 images for validation and use the other 16 for transfer learning on resnet34, tuning the weights of the last layer. That's going to be the benchmark, but it is unlikely to yield very accurate results due to the low number of examples.
 
-What CDA does is to produce a large set of _collages_ from the 16 images used for training. These collages are simply 3x3 arrays of images taken randomly among the 16 available for training. ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_collages_easy_pair.JPG)
+What CDA does is to produce a large set of _collages_ from the 16 images used for training. These collages are simply 3x3 arrays of images taken randomly among the 16 available for training. 
+
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_collages_easy_pair.JPG)
 
 Because there are 9=3x3 locations, and 16 images available, the number of different collages is $16^9>10^10$. We would obviously not consider all possible collages, but only a subset large enough, say around 50,000. The label of a collage is given by the class that occurs the most among the 9 images in it.
 
