@@ -18,7 +18,7 @@ What CDA does is to produce a large set of _collages_ from the 16 images used fo
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_collages_easy_pair.JPG)
 
-Because there are 9=3x3 locations, and 16 images available, the number of different collages is $16^9>10^10$. We would obviously not consider all possible collages, but only a subset large enough, say around 50,000. The label of a collage is given by the class that occurs the most among the 9 images in it.
+Because there are 9=3x3 locations, and 16 images available, the number of different collages is $16^9>10^{10}$. We would obviously not consider all possible collages, but only a subset large enough, say around 50,000. The label of a collage is given by the class that occurs the most among the 9 images in it.
 
 Once the desired number of collages is generated, a transfer learning from resnet34 is applied using them, and because the number of collages is now large, one can tune more than just the last layer of resnet34, which gives a neural network $N_{alt}$. 
 
