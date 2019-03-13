@@ -94,7 +94,7 @@ In addition, all 45 possible pairs among the 10 categories are considered, for s
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_performances_all_pairs.JPG)
 
-## Conclusions
+## Conclusions 
 
 This notebook presents a technique to deal with transfer-learning when the set of labelled images is too small to do an effective transfer learning using a pre-trained NN that has not originally being trained on the given labels.
 
