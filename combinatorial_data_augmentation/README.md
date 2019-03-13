@@ -92,7 +92,7 @@ Ratios between error rates:
 
 In addition, all 45 possible pairs among the 10 categories are considered, for some value of $m=|X_t|$ between 4 and 180, and the error rates on a test set are shown for both the benchmark and CDA. In all, but 1 case, CDA performs better than the benchmark. The results are shown here increasingly with respect to the ratio of error rates between CDA and the benchmark
 
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_performances_all_pairs.JPG)
+![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_performances_all_pairs_.JPG)
 
 ## Conclusions 
 
