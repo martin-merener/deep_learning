@@ -1,10 +1,10 @@
 # Combinatorial Data Augmentation
 
-In this project I develop a data augmentation approach that shows a strong reduction of test error rate in binary classification of images from the Fashion MNIST dataset.
+In this project I develop a data augmentation approach that provides a strong reduction in test error rate for binary classification of images from the Fashion MNIST dataset.
 
-The technique, which I call Combinatorial Data Augmentation (CDA), shows very promising results when very few labelled images are available even for transfer learning, e.g., 10 labelled images from each category. The notebook presents only binary case, but the exact same idea can be applied to multi-class problems. 
+The technique, which I call _Combinatorial Data Augmentation_ (CDA), shows very promising results when very few labelled images are available even for transfer learning, e.g., 10 labelled images from each category. The notebook presents only the binary case, but the exact same idea can be applied to multi-class problems. 
 
-The technique assumes that a pre-trained neural network is available, and that it has not been trained on the classes that the current problem aims to classify (otherwise, there is nothing to solve). In the notebook I use resnet34.
+The technique assumes that a pre-trained neural network is available, and that it has not been trained on the classes that the current problem aims to classify (otherwise, there is no problem to solve). In the notebook I use resnet34.
 
 ## How CDA works
 
