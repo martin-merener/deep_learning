@@ -8,7 +8,7 @@ The technique assumes that a pre-trained neural network is available, and that i
 
 ## How CDA works
 
-Suppose we want to classify images from these two categories...[insert images] and we have only 12 images from each class, so 24 labelled images in total. We could leave 8 images for validation and use the other 16 for transfer learning on resnet34, tuning the weights of the last layer. That's going to be the benchmark, but it is unlikely to yield very accurate results due to the low number of examples.
+Suppose we want to classify images from these two categories: ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_images_easy_pair.JPG) and we have only 12 images from each class, so 24 labelled images in total. We could leave 8 images for validation and use the other 16 for transfer learning on resnet34, tuning the weights of the last layer. That's going to be the benchmark, but it is unlikely to yield very accurate results due to the low number of examples.
 
 What CDA does is to produce a large set of _collages_ from the 16 images used for training. These collages are simply 3x3 arrays of images taken randomly among the 16 available for training. [insert example].
 
