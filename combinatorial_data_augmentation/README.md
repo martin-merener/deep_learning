@@ -1,9 +1,9 @@
 # Combinatorial Data Augmentation
 
-(1) Binary Case and Analysis
-(2) Multi-class case
+1. Binary Case and Analysis
+2. Multi-class case
 
-## Binary case and analysis
+## 1. Binary case and analysis
 
 In this project I develop a data augmentation approach that provides a strong reduction in test error rate for binary classification of images from the Fashion MNIST dataset.
 
