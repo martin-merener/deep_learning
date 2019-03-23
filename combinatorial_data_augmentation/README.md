@@ -12,7 +12,7 @@ The two accompanying notebooks cover:
 
 All 45 pairs of categories are tested, and then two specific pairs (one hard to distinguish, one easy) are analyzed in more detail. 
 
-2. Multi-class case
+#### 2. Multi-class case
 
 All 10 categories are classified at once.
 
@@ -25,12 +25,6 @@ The list of categories is:
 tshirt; trouser; pullover; dress; coat; sandal; shirt; sneaker; bag; boot
 
 Some examples:
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/pullover_dress.JPG)
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/sneaker_boot.JPG)
-
-![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/trouser_shirt.JPG)
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/images_multiclass.JPG)
 
