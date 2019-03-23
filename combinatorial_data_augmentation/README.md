@@ -1,5 +1,10 @@
 # Combinatorial Data Augmentation
 
+(1) Binary Case and Analysis
+(2) Multi-class case
+
+## Binary case and analysis
+
 In this project I develop a data augmentation approach that provides a strong reduction in test error rate for binary classification of images from the Fashion MNIST dataset.
 
 The technique, which I call _Combinatorial Data Augmentation_ (CDA), shows very promising results when very few labelled images are available even for transfer learning, e.g., 10 labelled images from each category. The notebook presents only the binary case, but the exact same idea can be applied to multi-class problems. 
