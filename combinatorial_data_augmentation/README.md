@@ -105,12 +105,10 @@ In addition, all 45 possible pairs among the 10 categories are considered, for s
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_performances_all_pairs_.JPG)
 
-## 1.4 Conclusions 
+## Conclusions 
 
 This notebook presents a technique to deal with transfer-learning when the set of labelled images is too small to do an effective transfer learning using a pre-trained NN that has not originally being trained on the given labels.
 
 The technique is tested on the Fashion-MNIST dataset, showing very promising results in terms of error rate reduction on a test set.
 
-The reduction on error rate depends on the categories used (here only binary case is studied), as well as the subset of images randomly selected for each run of the experiment.
-
-The experiments show that almost every time the CDA technique has a significantly better performance than the benchmark.
+The reduction on error rate is higher when the number of training images is very low, and it is milder as the number of training images increases. 
