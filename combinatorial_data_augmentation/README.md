@@ -1,16 +1,16 @@
 # Combinatorial Data Augmentation
 
-In this project I develop a data augmentation approach that provides a strong reduction in test error rate for image classification of images from the Fashion MNIST dataset.
+In this project I develop a data augmentation approach that provides a strong reduction in test error rate for image classification of images from the Fashion MNIST dataset (10 classes).
 
 The technique, which I call _Combinatorial Data Augmentation_ (CDA), shows very promising results when very few labelled images are available even for transfer learning, e.g., 10 labelled images from each category. 
 
-The technique assumes that a pre-trained neural network is available, and that it has not been trained on the classes that the current problem aims to classify (otherwise, there is no problem to solve). In the notebook I use resnet34.
+The technique assumes that a pre-trained neural network is available, and that it has not been trained on the classes that the current problem aims to classify (otherwise, there is no problem to solve). For example, resnet34.
 
 The two accompanying notebooks cover: 
 
 #### 1. Binary Case and Analysis
 
-All 45 pairs of categories are tested, and then two specific pairs (one hard to distinguish, one easy) are analyzed in more detail. 
+All 45 pairs of classes in Fashion MNIST are tested, and then two specific pairs (one hard to distinguish, one easy) are analyzed in more detail. 
 
 #### 2. Multi-class case
 
@@ -18,7 +18,7 @@ All 10 categories are classified at once.
 
 ### Dataset
 
-The Fashion-MNIST dataset https://github.com/zalandoresearch/fashion-mnist contains images for 10 categories of clothing. In the training set (60,000 images), each category has 6,000 training images; while the testing set contains a total of 6,000 images, with 1,000 from each categories. 
+The Fashion-MNIST dataset https://github.com/zalandoresearch/fashion-mnist contains images for 10 categories of clothing. It is partitioned into two subsets, one with 60,000 images (6,000 for each class), and a second one with 10,000 images (1,000 for each class). Typically the first one would be used for training, and the second for testing. However, in the multi-class case, we switch them, and use the 60K for testing (to have a reliable performance measure), and the 10K for training, because we require precisely a low number of training images. 
 
 The list of categories is:
 
@@ -29,6 +29,7 @@ Some examples:
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/images_multiclass.JPG)
 
 
+
 ## 1. Binary case and analysis
 
 In this project I develop a data augmentation approach that provides a strong reduction in test error rate for binary classification of images from the Fashion MNIST dataset.
@@ -37,7 +38,7 @@ The technique, which I call _Combinatorial Data Augmentation_ (CDA), shows very 
 
 The technique assumes that a pre-trained neural network is available, and that it has not been trained on the classes that the current problem aims to classify (otherwise, there is no problem to solve). In the notebook I use resnet34.
 
-### How CDA works
+### 1.1 How CDA works
 
 Suppose we want to classify images from these two categories: 
 
@@ -57,13 +58,13 @@ Finally, one applies a transfer learning on $N_{alt}$, based on the 16 original 
 
 The intuition is that because $N_{alt}$ has learned to classify the collages according to the majority class in them, and this has been done for thousands of images (potentially millions), $N_{alt}$ has learned already a lot of useful patterns related to the problem of interest. Therefore, a further transfer learning starting at $N_{alt}$, and based on the 16 original images, would likely do a better job at classifying the two original classes. 
 
-### Experiments
+### 1.2 Experiments
 
 This project shows that for the 45 possible binary classification problems induced by the Fashion MNIST dataset (which has 10 classes, therefore 45 possible un-ordered pairs), the CDA approach achieves a much smaller error rate than the benchmark on a dataset.
 
 In addition, two specific pairs, one "easy" and one "hard" to classify, are analyzed in more detail, by looking at how the error rate in the test set behaves as a function of $m=|X_t|$, the number of training images.
 
-## Results
+### 1.3 Results
 
 
 #### Easy pair 
@@ -104,7 +105,7 @@ In addition, all 45 possible pairs among the 10 categories are considered, for s
 
 ![alt text](https://github.com/martin-merener/deep_learning/blob/master/combinatorial_data_augmentation/images/project4_performances_all_pairs_.JPG)
 
-## Conclusions 
+## 1.4 Conclusions 
 
 This notebook presents a technique to deal with transfer-learning when the set of labelled images is too small to do an effective transfer learning using a pre-trained NN that has not originally being trained on the given labels.
 
